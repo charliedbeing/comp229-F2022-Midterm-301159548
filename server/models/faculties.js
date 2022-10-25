@@ -1,3 +1,11 @@
+/** 
+ * FileName:faculties.js
+ * Author:Charlie Ding
+ * StudentID:301159548
+ * WebApplicationName:Faculty Information
+ */
+
+
 let mongoose = require("mongoose");
 
 // create a model class

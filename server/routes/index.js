@@ -1,10 +1,15 @@
+/** 
+ * FileName:index.js
+ * Author:Charlie Ding
+ * StudentID:301159548
+ * WebApplicationName:Faculty Information
+ */
+
 // modules required for routing
 let express = require("express");
 let router = express.Router();
 let mongoose = require("mongoose");
 
-// define the game model
-let faculty = require("../models/faculties");
 
 /* GET home page. wildcard */
 router.get("/", (req, res, next) => {

@@ -1,0 +1,48 @@
+<% include ../partials/header.ejs %>
+
+
+<!-- list all faculties -->
+<main class="container">
+    <div class="row">
+      <div class="col-md-offset-3 col-md-8">
+        <h1><%=title %></h1>
+    
+        <a href="/faculties/add" class="btn btn-primary" role="button">
+        <i class ="fas fa-plus-circle"></i> Add a faculty
+        </a>
+        <br />
+        <table class="table table-bordered table-striped table-hover">
+          <!--HEader row-->
+          <tr>
+            <th class="text-center">Facultyname</th>
+            <th class="text-center">Department</th>
+            <th class="text-center">Subject</th>
+            <th class="text-center"></th>
+            <th class="text-center"></th>
+  
+          </tr>
+  
+          <!--Repetable Templet row-->
+          <% for (let count=0; count<faculties.length; count++){%>
+            <tr>
+              <td class="text-centre "><%=faculties[count].Facultyname %></td>
+              <td class="text-centre "><%=faculties[count].Department %></td>
+              <td class="text-centre "><%=faculties[count].Subject %></td>
+    
+              <!-- each faculty can be edit or delete-->
+              <td class="text-center col-1">
+                <a href="/faculties/edit/<%= faculties[count]._id %>" class="btn btn-primary btn-sm">
+                <i class="fas fa-pencil-alt"></i> Edit</a>
+            </td>
+            <td class="text-center col-1">
+                <a href="/faculties/delete/<%= faculties[count]._id %>" class="btn btn-danger btn-sm">
+                <i class="fas fa-trash-alt"></i> Delete</a>
+            </td>        
+            </tr>
+          <%}%>
+        </table>
+      </div>
+    </div>
+  </main>
+
+<% include ../partials/footer.ejs %>

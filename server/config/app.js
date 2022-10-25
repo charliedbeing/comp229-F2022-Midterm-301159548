@@ -1,3 +1,10 @@
+/** 
+ * FileName:app.js
+ * Author:Charlie Ding
+ * StudentID:301159548
+ * WebApplicationName:Faculty Information
+ */
+
 // moddules for node and express
 let createError = require("http-errors");
 let express = require("express");
